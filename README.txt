@@ -15,3 +15,8 @@ Features:
 - Details: View anime information including genre, seasons, and ratings.
 - Comments & Ratings: Users can leave comments and ratings for anime.
 - Pagination: Anime and comments are paginated for better navigation.
+
+How to Run:
+-Install dependencies: npm install express (and mysql2)
+Start the server: node server.js
+Set up the MySQL database with tables for anime and ratings.
