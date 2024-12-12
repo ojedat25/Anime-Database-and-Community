@@ -1,0 +1,59 @@
+<!-- 
+Client-side html file (index.html)
+Full-Stack Project
+Toni Ojeda
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <title><h1>Home</h1></title>
+
+    <!-- Link to CSS file to style the page -->
+    <link rel="stylesheet" href="index.css" type="text/css">
+
+    <!-- Link to an external Google font (Alegreya) -->
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- Link to JavaScript file (index.js) that is loaded after the page content -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <!-- Header section that typically contains the website's title and navigation -->
+    <header>
+      <!-- Main heading for the home page -->
+      <h2>Home</h2>
+
+      <!-- Navigation bar with links to different pages in the website -->
+      <nav>
+        <!-- Link to the home page, styled with the "navItem" class and underlined -->
+        <a href="#" class="navItem" style="text-decoration: underline">Home</a>
+
+        <!-- Link to the Anime List page -->
+        <a href="anime.html" class="navItem">Anime List</a>
+
+        <!-- Link to the Add Anime page -->
+        <a href="addAnime.html" class="navItem">Add Anime</a>
+      </nav>
+    </header>
+
+    <!-- Main content area of the page -->
+    <main>
+      <!-- Div container to hold the welcome message and page description -->
+      <div class="containers">
+        <!-- Main welcome message -->
+        <h1>WELCOME!</h1>
+
+        <!-- Subheading with some instructions and links -->
+        <h2>
+          This website is meant to be used as a database for anime shows.<br>
+          To search for an anime in our database you can click <a href="anime.html">here</a>.<br>
+          To add an anime to the database you can click <a href="addAnime.html">here</a>.<br>
+          You can also use the navigation bar to access both parts of the page.<br>
+          Hope you enjoy!
+        </h2>
+      </div>
+    </main>
+  </body>
+</html>

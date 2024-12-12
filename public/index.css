@@ -1,0 +1,92 @@
+/*
+Client-side css file (index.css)
+Full-Stack Project
+Toni Ojeda
+*/
+
+/*
+Universal reset for consistent styling.
+Removes default margin, padding, and borders.
+Sets universal box-sizing and default font-family. 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya", serif;
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+
+/* Body Styles */
+body {
+  background-color: rgb(45, 45, 45); /* Dark background color */
+  display: grid; /* Using grid layout */
+}
+
+/* Container Styles */
+.containers {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  width: 100%; /* Full width */
+  height: auto; /* Auto height based on content */
+  background-color: rgba(153, 153, 153, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur background */
+  padding: 10px; /* Padding around content */
+  border-radius: 5px; /* Rounded corners */
+  gap: 20px; /* Space between elements */
+}
+
+/* Anchor Link Styles within Containers */
+.containers a {
+  text-decoration: underline; /* Underline for links */
+  color: rgb(45, 45, 45); /* Set color of links */
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  padding: 2% 5% 1% 5%; /* Padding inside header */
+  background-color: rgba(153, 153, 153, 0.6); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect on the background */
+  justify-content: space-between; /* Space between header items */
+}
+
+/* Main Section Styles */
+main {
+  padding: 1%; /* Padding around the main section */
+  display: flex;
+  flex-direction: row; /* Align children horizontally */
+  height: 100%; /* Full height */
+  width: 100%; /* Full width */
+  gap: 2%; /* Gap between elements */
+  text-align: center; /* Center text alignment */
+}
+
+/* Navigation Styles */
+nav {
+  font-size: 1.5vw; /* Font size based on viewport width */
+  display: flex;
+  gap: 5%; /* Space between navigation items */
+  width: 30%; /* Set width for the nav section */
+  justify-content: space-evenly; /* Even spacing between items */
+}
+
+/* Navigation Item Styles */
+.navItem {
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 1s; /* Smooth transition effect */
+  font-weight: bold; /* Bold text for navigation items */
+}
+
+/* Hover Effects for Navigation Items */
+.navItem:hover {
+  text-shadow: 0 0 12px black; /* Add shadow effect on hover */
+  text-decoration: underline; /* Underline text on hover */
+}
+
+/* Global Hover Effects for Links */
+a:hover {
+  text-shadow: 0 0 12px black; /* Add shadow effect on hover for all links */
+}

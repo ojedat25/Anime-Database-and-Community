@@ -1,0 +1,122 @@
+<!-- 
+Client-side html file (addAnime.html)
+Full-Stack Project
+Toni Ojeda
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+
+    <!-- Title of the page -->
+    <title>Add Anime</title>
+
+    <!-- Link to CSS file to style the page -->
+    <link rel="stylesheet" href="addAnime.css" type="text/css" >
+
+    <!-- Link to an external Google font (Alegreya) -->
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" >
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Link to JavaScript file (addAnime.js) that is loaded after the page content -->
+    <script src="addAnime.js" defer></script>
+  </head>
+  <body>
+    <!-- Header section with page title and navigation -->
+    <header>
+      <h2>Add Anime</h2>
+      <nav>
+        <!-- Navigation links for the page -->
+        <a href="index.html" class="navItem">Home</a>
+        <a href="anime.html" class="navItem">Anime List</a>
+        <!-- Current page (Add Anime) is highlighted with underline -->
+        <a href="#" class="navItem" style="text-decoration: underline">Add Anime</a>
+      </nav>
+    </header>
+
+    <!-- Main content area for the form to add anime -->
+    <main>
+      <form id="animeForm" class="containers">
+        <!-- Anime Name input field -->
+        <p class="hidden" id="errorMessage">Anime already in database, try a different anime</p>
+        <p style="width: 100%">
+          <label for="name">Anime Name: </label>
+          <input type="text" name="name" id="name" required >
+          <!-- 'required' ensures field must be filled -->
+        </p>
+
+        <!-- Number of seasons input field -->
+        <p>
+          <label for="seasons">Seasons: </label>
+          <input type="number" id="seasons" name="seasons" required min="1" step="1" style="width: 15%" >
+          <!-- Number field with minimum value of 1 -->
+        </p>
+
+        <!-- Dropdown menu for genre selection -->
+        <select name="genre" id="genre" required>
+          <!-- Default option to prompt user to select genre -->
+          <option value="">Genre</option>
+          <!-- List of available genres -->
+          <option value="Action">Action</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Horror">Horror</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Psychological">Psychological</option>
+          <option value="Romance">Romance</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Slice of Life">Slice of Life</option>
+          <option value="Shōnen">Shōnen</option>
+          <option value="Shōjo">Shōjo</option>
+          <option value="Seinen">Seinen</option>
+          <option value="Josei">Josei</option>
+          <option value="Kodomo">Kodomo</option>
+          <option value="Isekai">Isekai</option>
+          <option value="Mecha">Mecha</option>
+          <option value="Supernatural">Supernatural</option>
+          <option value="Sports">Sports</option>
+          <option value="Music">Music</option>
+          <option value="Historical">Historical</option>
+          <option value="Military">Military</option>
+          <option value="Martial Arts">Martial Arts</option>
+          <option value="Ecchi">Ecchi</option>
+          <option value="Harem">Harem</option>
+          <option value="Reverse Harem">Reverse Harem</option>
+          <option value="Game">Game</option>
+          <option value="Parody">Parody</option>
+          <option value="Gore">Gore</option>
+          <option value="Cyberpunk">Cyberpunk</option>
+          <option value="Post-Apocalyptic">Post-Apocalyptic</option>
+          <option value="Magical Girl (Mahō Shōjo)">Magical Girl (Mahō Shōjo)</option>
+          <option value="Tragedy">Tragedy</option>
+          <option value="Yaoi (Boys' Love)">Yaoi (Boys' Love)</option>
+          <option value="Yuri (Girls' Love)">Yuri (Girls' Love)</option>
+          <option value="Cooking/Food">Cooking/Food</option>
+          <option value="School">School</option>
+          <option value="Crime">Crime</option>
+          <option value="Hentai">Hentai</option>
+        </select>
+
+        <!-- Dropdown menu for the year the anime was released -->
+        <select name="year_released" id="year_released" required>
+          <!-- Default option prompting the user to select a year -->
+          <option value="">Released Year</option>
+        </select>
+
+        <!-- Dropdown menu for the year the anime finished or "ongoing" if not finished -->
+        <select name="year_finished" id="year_finished" required>
+          <option value="">Finished Year</option>
+          <option value="NULL">Ongoing</option>
+          <!-- Option for ongoing anime -->
+        </select>
+
+        <!-- Submit button to add the anime -->
+        <button type="submit" id="add">Add</button>
+      </form>
+    </main>
+  </body>
+</html>

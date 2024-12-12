@@ -1,0 +1,137 @@
+/*
+Client-side css file (addAnime.css)
+Full-Stack Project
+Toni Ojeda
+*/
+
+/*
+Universal reset for consistent styling.
+Removes default margin, padding, and borders.
+Sets universal box-sizing and default font-family. 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in element’s total width and height */
+  font-family: "Alegreya", serif; /* Set font family */
+  text-decoration: none; /* Remove default text decorations (e.g., underline) */
+  outline: none; /* Remove outline */
+  color: black; /* Set default text color */
+  border: none; /* Remove border */
+}
+
+/* Body Styles */
+body {
+  background-color: rgb(45, 45, 45); /* Dark background color */
+  display: grid; /* Use grid layout */
+}
+
+/* Header Styles */
+header {
+  position: absolute; /* Position header relative to the page */
+  display: flex; /* Use flexbox for layout */
+  padding: 2% 5% 1% 5%; /* Padding around the header */
+  background-color: rgba(153, 153, 153, 0.6); /* Semi-transparent background */
+  justify-content: space-between; /* Space out header items */
+  width: 100vw; /* Full width of the viewport */
+}
+
+/* Navigation Styles */
+nav {
+  font-size: 1.5vw; /* Font size relative to viewport width */
+  display: flex; /* Flexbox layout for navigation items */
+  gap: 5%; /* Space between items */
+  width: 30%; /* Set width of navigation */
+  justify-content: space-evenly; /* Evenly space out navigation items */
+}
+
+/* Navigation Item Styles */
+.navItem {
+  transition: all 1s; /* Smooth transition for all properties */
+  font-weight: bold; /* Bold text for navigation items */
+}
+
+/* Hover Effects for Navigation Items */
+.navItem:hover {
+  cursor: pointer; /* Pointer cursor on hover */
+  text-shadow: 0 0 12px black; /* Add text shadow on hover */
+  text-decoration: underline; /* Underline text on hover */
+}
+
+/* Main Section Styles */
+main {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Containers Styles */
+.containers {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  width: 50%; /* Set container width */
+  font-size: larger; /* Increase font size */
+  height: auto; /* Auto height based on content */
+  background-color: rgba(153, 153, 153, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect to background */
+  padding: 2%; /* Padding inside the container */
+  border-radius: 5px; /* Rounded corners */
+  gap: 20px; /* Space between elements */
+}
+
+/* Form Element Styles */
+select {
+  text-align: center; /* Center text in select box */
+  font-size: large; /* Set font size */
+}
+
+input {
+  width: 65%; /* Set width of input fields */
+}
+
+/* Button Styles */
+button {
+  position: relative; /* Position button relative to its parent */
+  font-size: large; /* Large font size */
+  width: 10%; /* Set width of button */
+  padding: 1%; /* Padding inside button */
+  left: 90%; /* Position button to the right */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Button Hover Effect */
+button:hover {
+  transform: scale(1.1, 1.1); /* Slightly enlarge button on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Button Active State */
+button:active {
+  transform: scale(1, 1); /* Reset button size when clicked */
+}
+
+/* Input, Textarea, and Select Element Border Radius & Padding*/
+input, textarea, select {
+  border-radius: 5px; /* Rounded corners for form elements */
+  padding: .5%; /* Padding inside form elements */
+}
+
+/* Focus State for Input and Textarea */
+input:focus, textarea:focus {
+  border: 2px solid green; /* Green border on focus */
+}
+/* Hides element from the display */
+.hidden{
+  display: none;
+}
+/*Error class changes input background-color */
+#error{
+  background-color: rgba(255, 0, 0, 0.324);
+}
+/*Error class for the error message */
+#errorMessage{
+  color: rgba(255, 0, 0, 0.324);
+  text-align: center;
+}

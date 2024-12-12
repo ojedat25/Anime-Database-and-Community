@@ -1,0 +1,241 @@
+
+/*
+Client-side css file (anime.css)
+Full-Stack Project
+Toni Ojeda
+*/
+
+/*
+Universal reset for consistent styling.
+Removes default margin, padding, and borders.
+Sets universal box-sizing and default font-family. 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Includes padding and border in element dimensions */
+  font-family: "Alegreya", serif; /* Elegant serif font */
+  text-decoration: none; /* Removes text underline */
+  outline: none; /* Removes focus outlines */
+  color: black; /* Sets default text color */
+  border: none; /* Removes default borders */
+}
+
+/*
+Body styles for background and layout.
+Grid layout ensures flexible placement for child elements. 
+*/
+body {
+  background-color: rgb(45, 45, 45); /* Dark background for contrast */
+  display: grid; /* Provides layout flexibility */
+}
+
+/*
+General container styles.
+Applied to modular sections for a consistent design.
+*/
+.containers {
+  display: flex;
+  flex-direction: column; /* Stacks child elements vertically */
+  width: 100%;
+  height: auto;
+  background-color: rgba(153, 153, 153, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Adds depth with blur effect */
+  padding: 10px; /* Internal spacing */
+  border-radius: 5px; /* Smooth corner radius */
+  gap: 20px; /* Space between child elements */
+  box-shadow: 0 0 12px black; /* Subtle shadow for elevation */
+}
+
+/*
+Header section with flexible alignment for navigation links.
+*/
+header {
+  display: flex; /* Horizontal layout */
+  padding: 2% 5% 1% 5%; /* Responsive padding */
+  background-color: rgba(153, 153, 153, 0.6); /* Slightly darker header */
+  backdrop-filter: blur(10px); /* Depth effect */
+  justify-content: space-between; /* Spaced layout for header elements */
+}
+
+/*
+Main content area layout with horizontal alignment.
+*/
+main {
+  padding: 1%; /* Adds spacing around content */
+  display: flex;
+  flex-direction: row; /* Horizontal arrangement of children */
+  height: 100%; /* Full-height content */
+  width: 100%; /* Full-width content */
+  gap: 2%; /* Spacing between sections */
+}
+
+/*
+Navigation styles for user interaction.
+*/
+nav {
+  font-size: 1.5vw; /* Scales with viewport width */
+  display: flex;
+  gap: 5%; /* Even spacing between nav items */
+  width: 30%; /* Restricts nav width */
+  justify-content: space-evenly; /* Distributes nav items evenly */
+}
+
+.navItem {
+  transition: all 1s; /* Smooth transition for hover effects */
+  font-weight: bold; /* bolded text */
+}
+
+.navItem:hover {
+  cursor: pointer; /* Indicates interactivity */
+  text-shadow: 0 0 12px black; /* Glow effect on hover */
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+/*
+Search container and input field styling for usability.
+*/
+#searchContainer {
+  text-align: center; /* Centers content */
+  font-size: larger; /* Scales font size */
+  height: fit-content; /* Sets height to fit content */
+}
+
+#filterForm {
+  display: flex; /* Aligns filters horizontally */
+  justify-content: center;
+  gap: 2%; /* Space between filter fields */
+}
+
+#searchForm label,
+#searchForm input {
+  font-size: larger; /* Increases readability */
+  width: 40%; /* Reserves space for inputs */
+  padding: 5px; /* Adds padding for usability */
+}
+
+#filterForm input {
+  width: 45px; /* Fixed width for compact fields */
+}
+
+/*
+Comment form layout and styling.
+*/
+#commentForm {
+  display: flex;
+  flex-direction: column; /* Stacks form elements vertically */
+  gap: 5px; /* Adds spacing between form elements */
+}
+
+button {
+  position: relative;
+  font-size: large; /* Increases button visibility */
+  width: 10%; /* Restricts button width */
+  left: 90%; /* Positions the button to the right */
+  border-radius: 5px; /* Smooth corners */
+}
+
+button:hover {
+  transform: scale(1.1, 1.1); /* Enlarges button slightly */
+  cursor: pointer; /* Indicates interactivity */
+}
+
+button:active {
+  transform: scale(1, 1); /* Restores size on click */
+}
+
+/*
+Hover effects for list items to enhance interactivity.
+*/
+#listContainer .listItem:hover {
+  cursor: pointer;
+  text-shadow: 0 0 12px black; /* Glow effect */
+  text-decoration: underline; /* Adds underline */
+}
+
+
+/*
+List item transition for smooth state changes.
+*/
+#listContainer .listItem {
+  transition: all 1s; /* Smooth animation for changes */
+  text-align: left; /* Aligns text to the left */
+}
+span {
+  white-space: nowrap; /* Prevents wrapping for inline elements */
+}
+
+.selected {
+  text-shadow: 0 0 12px black; /* Highlights selected items */
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none; /* Hides elements from view */
+}
+
+/*
+Anime info section with transitions for dynamic updates.
+*/
+#animeInfo {
+  transition: all 1s; /* Smooth appearance changes */
+  font-size: larger; /* Enhanced readability */
+}
+
+/*
+Universal styling for input, textarea, and select elements.
+*/
+input,
+textarea,
+select {
+  border-radius: 5px; /* Rounded corners */
+  padding: 0.5%; /* Adds spacing for content */
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid green; /* Highlights focused fields */
+}
+
+/*
+Page number styles.
+*/
+.pageNumbers {
+  cursor: pointer; /* Cursor pointer when hovering over element */
+}
+
+.pageNumbers:hover {
+  text-shadow: 0 0 12px black; /* Adds hover effect */
+  text-decoration: underline; /* Underline hover effect */
+}
+
+/*
+Section title styles for emphasis.
+*/
+.titles {
+  position: relative; /* Positioned relative to parent */
+  left: 25%; /* Centers title within the section */
+  text-align: center;
+  border-bottom: 2px solid black; /* Underlines the title */
+  width: 50%; /* Restricts width */
+}
+
+/*
+Styling for elements displaying no information.
+*/
+.noInfo{
+  color: rgb(61, 60, 60); /* Muted color */
+  text-align: center;
+}
+
+.pages{
+  display: flex; 
+  position: relative; 
+  top: -1%; /* Adjusts vertical alignment */
+  gap: 15px; /* Adds spacing between page numbers */
+  justify-content: flex-end; /* Aligns pagination to the right */
+}
+
+.infoItem{
+  font-weight: bolder; /* Highlights key information */
+}

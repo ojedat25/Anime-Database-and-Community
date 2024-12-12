@@ -1,0 +1,159 @@
+
+<!-- 
+Client-side html file (anime.html)
+Full-Stack Project
+Toni Ojeda
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" > <!-- Ensure proper character rendering -->
+
+    <title>Anime</title> <!-- Page title -->
+   
+    <!-- Link to an external Google font (Alegreya) -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" 
+      rel="stylesheet">
+    
+    <!-- Link to CSS file to style the page -->
+    <link rel="stylesheet" href="anime.css" type="text/css" >
+    
+    <!--jQuery library-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Link to JavaScript file (anime.js) that is loaded after the page content -->
+    <script src="anime.js" defer></script>
+  </head>
+  <body>
+    <!-- Header section containing the navigation menu -->
+    <header>
+      <h2>Anime List</h2> <!-- Page header title -->
+      <nav>
+        <!-- Navigation links for different sections/pages -->
+        <a href="index.html" class="navItem">Home</a>
+        <a href="#" class="navItem" style="text-decoration: underline;">Anime List</a>
+        <a href="addAnime.html" class="navItem">Add Anime</a>
+      </nav>
+    </header>
+
+    <!-- Main content area containing search and list sections -->
+    <main>
+      <!-- Section for search and filtering options -->
+      <div class="containers" id="searchContainer">
+        <div class="containers">
+          <!-- Search form for finding specific anime by name -->
+          <form id="searchForm">
+            <p>
+              <label for="searchBar">Search Anime:</label>
+              <input type="text" name="searchBar" id="searchBar" >
+            </p>
+          </form>
+          
+          <!-- Filtering form for narrowing search results -->
+          <form id="filterForm">
+            <label for="year_released">Year: </label>
+            <select name="year_released" id="year_released">
+              <option value="">All</option> <!-- Default option for all years -->
+              
+            </select>
+            
+            <label for="genreFilter">Genre: </label>
+            <select name="genreFilter" id="genreFilter">
+              <option value="">All</option> <!-- Default option for all genres -->
+              <option value="Action">Action</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Drama">Drama</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Horror">Horror</option>
+              <option value="Mystery">Mystery</option>
+              <option value="Psychological">Psychological</option>
+              <option value="Romance">Romance</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Slice of Life">Slice of Life</option>
+              <option value="Shounen">Shounen</option>
+              <option value="Shoujo">Shoujo</option>
+              <option value="Seinen">Seinen</option>
+              <option value="Josei">Josei</option>
+              <option value="Kodomo">Kodomo</option>
+              <option value="Isekai">Isekai</option>
+              <option value="Mecha">Mecha</option>
+              <option value="Supernatural">Supernatural</option>
+              <option value="Sports">Sports</option>
+              <option value="Music">Music</option>
+              <option value="Historical">Historical</option>
+              <option value="Military">Military</option>
+              <option value="Martial Arts">Martial Arts</option>
+              <option value="Ecchi">Ecchi</option>
+              <option value="Harem">Harem</option>
+              <option value="Reverse Harem">Reverse Harem</option>
+              <option value="Game">Game</option>
+              <option value="Parody">Parody</option>
+              <option value="Gore">Gore</option>
+              <option value="Cyberpunk">Cyberpunk</option>
+              <option value="Post-Apocalyptic">Post-Apocalyptic</option>
+              <option value="Magical Girl (Mahō Shōjo)">Magical Girl (Mahō Shōjo)</option>
+              <option value="Tragedy">Tragedy</option>
+              <option value="Yaoi (Boys' Love)">Yaoi (Boys' Love)</option>
+              <option value="Yuri (Girls' Love)">Yuri (Girls' Love)</option>
+              <option value="Cooking/Food">Cooking/Food</option>
+              <option value="School">School</option>
+              <option value="Crime">Crime</option>
+            </select>
+            
+            <label for="status">Status: </label>
+            <select name="status" id="status">
+              <option value="">All</option>
+              <option value="Ongoing">Ongoing</option>
+              <option value="Finished">Finished</option>
+            </select>
+          </form>
+        </div>
+        
+        <!-- Container for displaying list of anime -->
+        <div class="containers" id="listContainer">
+
+        </div>
+        
+        <!-- Pagination controls -->
+        <div id="listPages" class="pages"></div>
+      </div>
+      
+      <!-- Section for displaying detailed information about selected anime -->
+      <div class="containers" id="animeInfo">
+        <div class="containers">
+          <h2 class="titles">Anime Info</h2>
+          <p class="info">Anime Name: <span id="animeName" class="infoItem"></span></p>
+          <p class="info">Genre: <span id="genre" class="infoItem"></span></p>
+          <p class="info">Seasons: <span id="seasons" class="infoItem"></span></p>
+          <p class="info">Released-Finished: <span id="released_to_finished" class="infoItem"></span></p>
+          <p class="info">Rating: <span id="rating" class="infoItem"></span></p>
+        </div>
+
+        <!-- Section for displaying comments and pagination for comments -->
+        <div class="containers" id="commentSection">
+
+        </div>
+        <div id="commentPages" class="pages"></div>
+        
+        <!-- Form for adding comments -->
+        <form id="commentForm" class="containers">
+          <h2 class="titles">Add Comment</h2>
+          <p>
+            <label for="commentRating">Rating: </label>
+            <input type="number" name="commentRating" id="commentRating" min="0" max="5" step="0.5" required style="width: 50px;">
+          </p>
+          <p>
+            <label for="userName">Name: </label>
+            <input type="text" name="userName" id="userName" style="width: 20%;" placeholder="optional">
+          </p>
+          <label for="comment">Comment: </label>
+          <textarea name="comment" id="comment" cols="30" rows="10" style="border-radius: 5px;" placeholder="optional"></textarea>
+          <button type="submit" id="addComment">Add</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
